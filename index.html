@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Peace of I</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Welcome Screen with Typing Animation -->
+    <div id="welcome-screen">
+        <h1 class="typing">Welcome to A Peace of I</h1>
+        <p class="typing-subtext">Your Journey to Inner Peace Begins Here...</p>
+    </div>
+
+    <!-- Main Content Sections -->
+    <section id="who-we-are" class="section-box hidden">
+        <h2 class="neon-outline">Who We Are</h2>
+        <p>We are a company dedicated to helping you achieve peace of mind through various relaxation techniques.</p>
+    </section>
+
+    <section id="zen-hub" class="section-box hidden">
+        <h2 class="neon-outline">Zen Hub</h2>
+        <p>Explore our meditation and calming practices designed to help you find your inner peace.</p>
+    </section>
+
+    <section id="login" class="section-box hidden">
+        <h2 class="neon-outline">Login</h2>
+        <button onclick="googleLogin()">Login with Google</button>
+        <p>Or sign up for a new account below.</p>
+        <button onclick="signUp()">Sign Up</button>
+    </section>
+
+    <!-- Background Rain Audio -->
+    <audio id="rain-sound" loop autoplay>
+        <source src="rain.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
