@@ -1,65 +1,42 @@
-body {
-    font-family: 'Comic Sans MS', sans-serif;
-    background-color: #F7F7F7;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Peace of I</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Welcome Screen with Typing Animation -->
+    <div id="welcome-screen">
+        <h1 class="typing">Welcome to A Peace of I</h1>
+        <p class="typing-subtext">Your Journey to Inner Peace Begins Here...</p>
+    </div>
 
-#welcome-screen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('nature.jpg'); /* Replace with your own image */
-    background-size: cover;
-    color: white;
-    text-align: center;
-    position: relative;
-}
+    <!-- Main Content Sections -->
+    <section id="who-we-are" class="section-box hidden">
+        <h2 class="neon-outline">Who We Are</h2>
+        <p>We are a company dedicated to helping you achieve peace of mind through various relaxation techniques.</p>
+    </section>
 
-.typing {
-    font-size: 2.5em;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid white;
-    width: 0;
-    animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
-}
+    <section id="zen-hub" class="section-box hidden">
+        <h2 class="neon-outline">Zen Hub</h2>
+        <p>Explore our meditation and calming practices designed to help you find your inner peace.</p>
+    </section>
 
-.typing-subtext {
-    margin-top: 20px;
-    font-size: 1.2em;
-}
+    <section id="login" class="section-box hidden">
+        <h2 class="neon-outline">Login</h2>
+        <button onclick="googleLogin()">Login with Google</button>
+        <p>Or sign up for a new account below.</p>
+        <button onclick="signUp()">Sign Up</button>
+    </section>
 
-.section-box {
-    padding: 40px;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-    opacity: 0;
-    transform: translateY(30px);
-}
+    <!-- Background Rain Audio -->
+    <audio id="rain-sound" loop autoplay>
+        <source src="rain.mp3" type="audio/mpeg">
+    </audio>
 
-.section-box.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.neon-outline {
-    color: #00ffcc;
-    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
-    font-size: 2em;
-}
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blink {
-    50% { border-color: transparent; }
-}
+    <script src="script.js"></script>
+</body>
+</html>
